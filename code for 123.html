@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "roboto";
+        }
+        .visible{
+            visibility: visible;
+        }
+   
+        .invisible {
+            display: none;
+        }
+        
+    .circle {
+        position: absolute;
+        left: 65%;
+        top: 10%;
+        width: 10%;
+        height: 20%;
+        background-color: #08EC94;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+
+    .circle h1 {
+        position: absolute;
+        right: 50%;
+        top: -80%;
+        color: white;
+        text-decoration: none;
+        background: none;
+        font-size: 2em;
+    }
+    .rectangle {
+        position: absolute;
+        left: 77%;
+        top: 25%;
+        width: 10%;
+        height: 6%;
+        background-color: #FCCC37;
+    
+        opacity: 0.9;
+    }
+
+    .rectangle  h1 {
+        position: absolute;
+        left: 40%;
+        top: -450%;
+        color: white;
+        text-decoration: none;
+        background: none;
+        font-size: 2.5em;
+    }
+
+    .semicircle {
+        position: absolute;
+        left: 70%;
+        top: 35%;
+        width: 20%;
+        height: 20%;
+        background-color: #F03474;
+        border-radius: 0px 0px 150px 150px;
+        opacity: 0.9;
+    }
+
+    .semicircle h1 {
+        position: absolute;
+        left: 65%;
+        top: -100%;
+        color: white;
+        text-decoration: none;
+        background: none;
+        font-size: 3em;
+    }
+
+     
+    
+    </style>
+</head>
+
+<body>
+    <div id="trio" style="font-size: 4em; color: white; padding: 2em;   background-color: #07A2E3;" >
+        TRIO STEPS
+        <br>
+        OF OUR
+        <br>
+        CREATIVE
+        <br>
+        OUTPUT
+        <div id="one" class="circle">
+            <h1 > 1 </h1>
+     
+         </div>
+       
+        <div id="two" class="rectangle">
+           <h1>
+               2
+           </h1>
+        </div>
+        <div id="three" class="semicircle">
+          <h1>
+              3
+          </h1>
+        </div>
+    </div>
+
+
+    <div id="trio1" class="boxtrio1" style="font-size: 4em; color: white; padding: 2em;     background-color: #08EC94; text-align: center;">
+         TRIO STEPS
+        <br>
+        OF OUR
+        <br>
+        CREATIVE
+        <br>
+        OUTPUT
+    </div>
+    <div id="trio2" class="boxtrio2" style="font-size: 4em; color: white; padding: 2em;    background-color: #FCCC37; text-align: center;">
+         TRIO STEPS
+        <br>
+        OF OUR
+        <br>
+        CREATIVE
+        <br>
+        OUTPUT
+    </div>
+    <div id="trio3" class="boxtrio3" style="font-size: 4em; color: white; padding: 2em;   background-color: #F03474; text-align: center;">
+         TRIO STEPS
+        <br>
+        OF OUR
+        <br>
+        CREATIVE
+        <br>
+        OUTPUT
+    </div>
+
+</body>
+<script>
+
+    window.onload = setEventListener;
+
+    function setEventListener() {
+     
+        document.getElementById('trio').className = 'visible';
+        document.getElementById('trio1').className = 'invisible';
+        document.getElementById('trio2').className = 'invisible';
+        document.getElementById('trio3').className = 'invisible';
+
+        document.getElementById('one').onmouseover = showtrio1;
+        document.getElementById('two').onmouseover = showtrio2;
+        document.getElementById('three').onmouseover = showtrio3;
+
+    }
+
+    function showtrio1() {
+
+        document.getElementById('trio1').className = 'visible';
+        document.getElementById('trio').className = 'invisible';
+        document.getElementById('trio2').className = 'invisible';
+        document.getElementById('trio3').className = 'invisible';
+        document.getElementById('trio1').onmouseout = setEventListener;
+        
+
+
+    }
+    function showtrio2() {
+        document.getElementById('trio2').className = 'visible';
+        document.getElementById('trio').className = 'invisible';
+        document.getElementById('trio1').className = 'invisible';
+        document.getElementById('trio3').className = 'invisible';
+        document.getElementById('trio2').onmouseout = setEventListener;
+
+
+    }
+    function showtrio3() {
+        document.getElementById('trio3').className = 'visible';
+        document.getElementById('trio').className = 'invisible';
+        document.getElementById('trio1').className = 'invisible';
+        document.getElementById('trio2').className = 'invisible';
+        document.getElementById('trio3').onmouseout = setEventListener;
+
+
+    }
+
+
+</script>
+
+</html>
+
